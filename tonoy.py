@@ -1,5 +1,6 @@
-class stack:
-    def _init_ (self):
+class Stack:
+    
+    def __init__ (self):
         self.stack=[]
     def push(self,item):
         self.stack.append(item)
@@ -10,7 +11,7 @@ class stack:
     def peek(self):
         if self.is_empty():
             return "empty stack"
-        return self.stack.peek()
+        return self.stack[-1]
     def is_empty(self):
         return len(self.stack)==0
     def size(self):
@@ -19,7 +20,7 @@ class stack:
         print(self.stack)
 
 
-s=stack()
+s=Stack()
 s.push(10)
 s.push(20)
 s.push(30)
